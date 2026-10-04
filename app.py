@@ -31,6 +31,21 @@ ph = PasswordHasher()
 # Stores failed login attempts:
 # email -> [number_of_attempts, lockout_end_time]
 login_attempts = {}
+def init_db():
+    connection = sqlite3.connect("securenotes.db")
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT NOT NULL,
+            email TEXT UNIQUE NOT NULL,
+            password TEXT NOT NULL
+        )
+    """)
+
+    connection.commit()
+    connection.close()
 
 
 # --------------------------------------------------
@@ -241,4 +256,5 @@ def register_user():
 # --------------------------------------------------
 
 if __name__ == "__main__":
+    init_db()
     app.run(debug=True)
