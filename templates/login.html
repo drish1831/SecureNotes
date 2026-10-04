@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>SecureNotes Login</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>SECURE LOGIN</h1>
+
+        <p class="subtitle">
+            Sign in to access your SecureNotes account
+        </p>
+
+        <form action="/login" method="POST">
+
+        
+            <div class="form-group">
+
+                <label for="email">Email:</label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    name="email"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">Password:</label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                    name="password"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <button
+                    id="loginbutton"
+                    type="submit"
+                >
+                    LOGIN
+                </button>
+
+            </div>
+
+
+            {% if message %}
+
+                <p class="message">
+                    {{ message }}
+                </p>
+
+            {% endif %}
+
+        </form>
+
+
+        <a href="/register" class="link">
+            Don't have an account? Create one
+        </a>
+
+
+        <p class="security-badge">
+            🔒 <span>Secure authentication</span> powered by Argon2
+        </p>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+# Database
+*.db
+
+# Practice / learning files
+practice/
+
+# Duplicate HTML files
+login1.html
+register1.html
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/

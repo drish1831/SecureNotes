@@ -1,0 +1,256 @@
+ /* ================================
+   SECURENOTES - MAIN STYLES
+   ================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #243b75 0%, transparent 35%),
+        radial-gradient(circle at 80% 80%, #42245f 0%, transparent 35%),
+        #0b1020;
+
+    color: #ffffff;
+}
+
+
+/* ================================
+   MAIN CARD
+   ================================ */
+
+.container {
+    width: 420px;
+    padding: 40px;
+
+    background: rgba(20, 27, 48, 0.85);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(91, 110, 255, 0.08);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* ================================
+   LOGO / HEADING
+   ================================ */
+
+h1 {
+    text-align: center;
+
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+    background: linear-gradient(90deg, #7c8cff, #c77dff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #9ca7c5;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   FORM
+   ================================ */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cbd3eb;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #303a5c;
+
+    background: #11182c;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+input::placeholder {
+    color: #66708f;
+}
+
+input:focus {
+    border-color: #7c8cff;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 140, 255, 0.12);
+}
+
+
+/* ================================
+   BUTTON
+   ================================ */
+
+button {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #6675f5,
+        #9b6cff
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 8px 20px rgba(103, 117, 245, 0.25);
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(103, 117, 245, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   MESSAGES
+   ================================ */
+
+.message {
+    margin-top: 18px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: rgba(255, 82, 82, 0.08);
+
+    border: 1px solid rgba(255, 82, 82, 0.2);
+
+    color: #ff9b9b;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   LINKS
+   ================================ */
+
+.link {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #9ba8ff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.link:hover {
+    color: #c4cbff;
+}
+
+
+/* ================================
+   SMALL SECURITY BADGE
+   ================================ */
+
+.security-badge {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #737e9f;
+
+    font-size: 12px;
+}
+
+.security-badge span {
+    color: #7c8cff;
+}
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 90%;
+
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
